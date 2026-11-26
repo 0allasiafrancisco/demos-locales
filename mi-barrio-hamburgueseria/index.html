@@ -1,67 +1,91 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d97706">
-<title>Mi Barrio Hamburgueseria</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f0f0f">
+<title>Mi Barrio Hamburguesería · Arenales 2609</title><meta name="description" content="Hamburguesas caseras en Palermo. Pedí online por WhatsApp.">
 <style>
-:root{--c:#d97706}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,sans-serif;color:#1f1f1f;background:#fffaf4;overflow-x:hidden}
-#pg{position:fixed;top:0;left:0;height:4px;background:#fff;width:100%;transform-origin:0;transform:scaleX(0);z-index:30;mix-blend-mode:difference}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem;color:#fff;transition:background .3s,box-shadow .3s}
-nav.s{background:var(--c);box-shadow:0 2px 12px #0003}nav b{font-size:1.1rem}nav a{color:#fff;text-decoration:none;font-weight:600}
-.hero{min-height:100svh;background:linear-gradient(160deg,var(--c),#111 140%);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 1.2rem 3rem;position:relative;overflow:hidden}
-.hero h1{font-size:clamp(2.2rem,9vw,4.5rem);margin:.4rem 0;line-height:1.05}.hero p{opacity:.9;max-width:28rem}
-.fl{position:absolute;font-size:2.4rem;opacity:.18;animation:fl 7s ease-in-out infinite}.fl:nth-child(1){left:8%;top:18%}.fl:nth-child(2){right:10%;top:30%;animation-delay:-2s}.fl:nth-child(3){left:20%;bottom:14%;animation-delay:-4s}.fl:nth-child(4){right:18%;bottom:22%;animation-delay:-1s}
-@keyframes fl{50%{transform:translateY(-22px) rotate(12deg)}}
-.big{font-size:4.5rem;animation:pop 1s cubic-bezier(.2,1.6,.4,1) both}@keyframes pop{from{transform:scale(0)}}
-.btn{display:inline-block;background:#fff;color:var(--c);padding:.9rem 1.8rem;border-radius:99px;font-weight:800;text-decoration:none;border:0;font-size:1rem;cursor:pointer;margin-top:1.2rem;transition:transform .15s;animation:pulse 2.4s infinite}
-.btn:active{transform:scale(.93)}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #fff8}50%{box-shadow:0 0 0 14px #fff0}}
-.stats{display:flex;gap:1.5rem;margin-top:2rem}.stats div{font-size:.8rem;opacity:.9}.stats b{display:block;font-size:1.5rem}
-section{max-width:680px;margin:auto;padding:3.5rem 1.1rem}h2{color:var(--c);font-size:1.8rem;margin:0 0 1rem}
-.rv{opacity:0;transform:translateY(32px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
-.rv.l{transform:translateX(-40px)}.rv.r{transform:translateX(40px)}.rv.in.l,.rv.in.r{transform:none}
-.g{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.card{background:#fff;border-radius:18px;padding:1rem;box-shadow:0 2px 8px #0001;display:flex;flex-direction:column;gap:.3rem}
-.card .em{font-size:2.2rem}.card b{color:var(--c);font-size:1.1rem}
-.card button{margin-top:auto;border:0;background:var(--c);color:#fff;border-radius:12px;padding:.6rem;font-weight:700;font-size:.95rem}.card button:active{transform:scale(.93)}
-.steps{display:grid;gap:.8rem}.st{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:16px;padding:1rem}.st i{font-style:normal;background:var(--c);color:#fff;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-weight:800;flex:none}
-iframe{width:100%;height:230px;border:0;border-radius:16px;margin-top:.8rem}
-footer{text-align:center;padding:2rem 1rem 6rem;color:#888;font-size:.8rem}
-#fab{position:fixed;right:1rem;bottom:1rem;z-index:25;background:#25d366;color:#fff;border:0;border-radius:99px;padding:.9rem 1.2rem;font-weight:800;font-size:1rem;box-shadow:0 4px 14px #0004}
-#fab.b{animation:bn .4s}@keyframes bn{50%{transform:scale(1.25)}}
-#dr{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-radius:22px 22px 0 0;padding:1.2rem;max-height:75vh;overflow:auto;transform:translateY(105%);transition:transform .35s cubic-bezier(.2,.9,.3,1);box-shadow:0 -6px 24px #0004}
-#dr.o{transform:none}#bk{position:fixed;inset:0;background:#0006;z-index:35;opacity:0;pointer-events:none;transition:opacity .3s}#bk.o{opacity:1;pointer-events:auto}
-.ln{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid #eee}
-.ln button{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--c);background:#fff;color:var(--c);font-size:1.1rem}
-#go{width:100%;background:#25d366;color:#fff;margin-top:1rem;animation:none}
-#ts{position:fixed;top:4.5rem;left:50%;transform:translate(-50%,-80px);background:#222;color:#fff;padding:.6rem 1rem;border-radius:99px;z-index:50;transition:transform .3s;font-size:.9rem}#ts.o{transform:translate(-50%,0)}
-.demo{position:fixed;bottom:0;left:0;background:#222;color:#fff;font-size:.65rem;padding:.2rem .5rem;z-index:26;border-radius:0 8px 0 0}
+:root{--o:#ff6a00;--y:#ffc400;--k:#0f0f0f;--g:#1b1b1b}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}
+body{margin:0;background:var(--k);color:#f5f5f5;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden}
+#pg{position:fixed;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--y),var(--o));transform-origin:0;transform:scaleX(0);z-index:60}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem;transition:background .3s}nav.s{background:#0f0f0fee}
+nav b{font-size:1.05rem;letter-spacing:.5px}.st{font-size:.75rem;padding:.3rem .7rem;border-radius:99px;font-weight:700}.st.on{background:#16a34a}.st.off{background:#dc2626}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 1.2rem 2rem;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#ff6a0055,transparent 60%)}
+.burger{width:170px;margin:0 auto;animation:bob 3s ease-in-out infinite}.burger i{display:block;margin:0 auto;animation:drop .7s cubic-bezier(.2,1.5,.4,1) both}
+.b1{height:52px;width:100%;background:#d97706;border-radius:90px 90px 14px 14px;animation-delay:.5s!important;box-shadow:inset 0 10px #fbbf24}
+.b2{height:12px;width:96%;background:#65a30d;border-radius:20px;animation-delay:.4s!important;margin-top:-2px!important}
+.b3{height:14px;width:92%;background:#facc15;border-radius:4px;clip-path:polygon(0 0,100% 0,95% 100%,80% 60%,60% 100%,40% 60%,20% 100%,5% 60%);animation-delay:.3s!important}
+.b4{height:26px;width:100%;background:#5b2a0e;border-radius:14px;animation-delay:.2s!important}
+.b5{height:30px;width:100%;background:#d97706;border-radius:8px 8px 40px 40px;animation-delay:.1s!important}
+@keyframes drop{from{transform:translateY(-300px);opacity:0}}@keyframes bob{50%{transform:translateY(-10px) rotate(-2deg)}}
+h1{font-size:clamp(2.4rem,11vw,4.8rem);line-height:1;margin:1.2rem 0 .5rem;text-transform:uppercase;font-weight:900}h1 span{color:var(--y)}
+.hero p{max-width:26rem;color:#ccc;margin:.3rem 0}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--o),var(--y));color:#111;padding:1rem 2rem;border-radius:99px;font-weight:900;text-decoration:none;border:0;font-size:1rem;margin-top:1.2rem;animation:pulse 2.2s infinite;cursor:pointer}.btn:active{transform:scale(.94)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ff6a0099}50%{box-shadow:0 0 0 16px #ff6a0000}}
+.mq{background:var(--y);color:#111;font-weight:900;overflow:hidden;white-space:nowrap;padding:.6rem 0;transform:rotate(-1.5deg);margin:1rem -5%}.mq div{display:inline-block;animation:mq 14s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+section{max-width:700px;margin:auto;padding:2.5rem 1.1rem}h2{font-size:2rem;margin:0 0 1rem;text-transform:uppercase;font-weight:900}h2 span{color:var(--o)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}.rv.l{transform:translateX(-44px)}.rv.r{transform:translateX(44px)}.rv.in.l,.rv.in.r{transform:none}
+.tabs{position:sticky;top:3.1rem;z-index:40;display:flex;gap:.5rem;overflow-x:auto;padding:.6rem 1.1rem;background:var(--k);scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:1px solid #333;background:var(--g);color:#ddd;padding:.55rem 1.1rem;border-radius:99px;font-weight:700;transition:.2s}.tabs button.a{background:var(--o);color:#111;border-color:var(--o)}
+.it{display:flex;gap:.9rem;background:var(--g);border-radius:18px;padding:.9rem;margin:.7rem 0;align-items:center}
+.it .em{font-size:2.6rem;width:3.4rem;text-align:center;flex:none}.it .t{flex:1}.it b{font-size:1.05rem}.it small{display:block;color:#999;margin:.15rem 0}.it .p{color:var(--y);font-weight:900}
+.it button{border:0;background:var(--o);color:#111;font-weight:900;width:2.6rem;height:2.6rem;border-radius:50%;font-size:1.4rem;flex:none}.it button:active{transform:scale(.85)}
+.combo{background:linear-gradient(120deg,var(--o),#e11d48);border-radius:20px;padding:1.3rem;text-align:center;color:#fff}.combo b{font-size:1.4rem}
+.steps{display:grid;gap:.7rem}.sp{display:flex;gap:1rem;align-items:center;background:var(--g);border-radius:16px;padding:1rem}.sp i{font-style:normal;background:var(--y);color:#111;font-weight:900;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;flex:none}
+iframe{width:100%;height:230px;border:0;border-radius:16px;filter:invert(.9) hue-rotate(180deg)}
+footer{text-align:center;color:#777;font-size:.8rem;padding:2rem 1rem 7rem}
+#fab{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:55;background:linear-gradient(90deg,var(--o),var(--y));color:#111;border:0;border-radius:18px;padding:1rem;font-weight:900;font-size:1.05rem;display:flex;justify-content:space-between;transform:translateY(120px);transition:transform .35s}#fab.v{transform:none}#fab.b{animation:bn .35s}@keyframes bn{50%{transform:scale(1.05)}}
+#bk{position:fixed;inset:0;background:#000a;z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}#bk.o{opacity:1;pointer-events:auto}
+#dr{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#181818;border-radius:24px 24px 0 0;padding:1.2rem;max-height:88vh;overflow:auto;transform:translateY(105%);transition:transform .35s cubic-bezier(.2,.9,.3,1)}#dr.o{transform:none}
+.ln{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid #2a2a2a}.ln button{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--o);background:none;color:var(--o);font-size:1.1rem}
+.ex{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}.ex label{background:var(--g);border:1px solid #333;border-radius:99px;padding:.4rem .8rem;font-size:.85rem}.ex input{display:none}.ex label:has(input:checked){background:var(--o);color:#111;border-color:var(--o)}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.8rem 0}.sw button{padding:.7rem;border-radius:12px;border:1px solid #333;background:var(--g);color:#ddd;font-weight:700}.sw button.a{background:var(--y);color:#111;border-color:var(--y)}
+#dr input[type=text]{width:100%;background:var(--g);border:1px solid #333;border-radius:12px;color:#fff;padding:.8rem;margin:.3rem 0;font-size:1rem}
+#go{width:100%;background:#25d366;color:#fff;animation:none}
+#ts{position:fixed;top:4.5rem;left:50%;transform:translate(-50%,-90px);background:#fff;color:#111;padding:.6rem 1rem;border-radius:99px;z-index:90;transition:transform .3s;font-weight:700;font-size:.9rem}#ts.o{transform:translate(-50%,0)}
+.demo{position:fixed;top:0;left:50%;transform:translateX(-50%);background:#fff;color:#111;font-size:.6rem;padding:.1rem .6rem;border-radius:0 0 8px 8px;z-index:65;font-weight:700}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style></head><body>
-<div id="pg"></div>
-<nav id="nv"><b>🍔 Mi Barrio Hamburgueseria</b><a href="#menu">Menú</a></nav>
-<header class="hero"><span class="fl">🍔</span><span class="fl">🍔</span><span class="fl">🍔</span><span class="fl">🍔</span>
-<div class="big">🍔</div><h1>Mi Barrio Hamburgueseria</h1><p>Hamburgueseria en Arenales 2609. Pedí fácil desde tu celular.</p>
-<a class="btn" href="#menu">Hacer pedido</a>
-<div class="stats"><div><b data-n="100">0</b>% casero</div><div><b data-n="15">0</b> min</div><div><b data-n="5">0</b>★</div></div></header>
-<section id="menu"><h2 class="rv">Lo más pedido</h2><div class="g" id="list"></div></section>
-<section><h2 class="rv">Cómo pedir</h2><div class="steps">
-<div class="st rv l"><i>1</i>Elegí tus productos</div><div class="st rv r"><i>2</i>Tocá “Pedir por WhatsApp”</div><div class="st rv l"><i>3</i>Confirmamos y listo</div></div></section>
-<section><h2 class="rv">Dónde estamos</h2><p class="rv">📍 Arenales 2609<br>📞 <a href="tel:5491148237208">+54 11 4823-7208</a></p>
+<div id="pg"></div><div class="demo">DEMO · menú y precios de muestra</div>
+<nav id="nv"><b>🍔 MI BARRIO</b><span class="st" id="st"></span></nav>
+<header class="hero"><div class="burger"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
+<h1>Mi Barrio<br><span>Hamburguesería</span></h1><p>Hamburguesas caseras, papas crocantes y mucho queso. Arenales 2609, Palermo.</p>
+<a class="btn" href="#menu">Pedir ahora 🔥</a></header>
+<div class="mq"><div>🍔 CARNE 100% CASERA · 🍟 PAPAS CROCANTES · 🧀 CHEDDAR DE VERDAD · 🛵 ENVÍO A DOMICILIO · 🍔 CARNE 100% CASERA · 🍟 PAPAS CROCANTES · 🧀 CHEDDAR DE VERDAD · 🛵 ENVÍO A DOMICILIO · </div></div>
+<section id="menu"><h2 class="rv">Nuestro <span>menú</span></h2></section>
+<div class="tabs" id="tabs"></div>
+<section style="padding-top:.5rem"><div id="list"></div>
+<div class="combo rv" style="margin-top:1.5rem"><b>🔥 Combo Barrio</b><br>Doble cheddar + papas + bebida<br><span style="font-size:1.6rem;font-weight:900">$12.500</span><br><button class="btn" style="margin-top:.8rem;animation:none" onclick="add(10)">Agregar combo</button></div></section>
+<section><h2 class="rv">Cómo <span>pedir</span></h2><div class="steps"><div class="sp rv l"><i>1</i>Elegí tus hamburguesas</div><div class="sp rv r"><i>2</i>Retiro o envío, y tus datos</div><div class="sp rv l"><i>3</i>Se arma tu pedido y llega por WhatsApp</div></div></section>
+<section><h2 class="rv">Dónde <span>estamos</span></h2><p class="rv">📍 Arenales 2609, Buenos Aires<br>📞 <a style="color:var(--y)" href="tel:+541148237208">+54 11 4823-7208</a><br>🕐 Dom a Jue 12 a 24 · Vie y Sáb 12 a 01</p>
 <iframe class="rv" loading="lazy" src="https://maps.google.com/maps?q=Mi+Barrio+Hamburgueseria+Arenales+2609+Buenos+Aires&output=embed"></iframe></section>
-<footer>© Mi Barrio Hamburgueseria</footer>
-<div class="demo">Demo · precios de muestra</div>
-<button id="fab">🛒 <span id="cn">0</span> · <span id="ct">$0</span></button>
-<div id="bk"></div><div id="dr"><h2 style="margin:0">Tu pedido</h2><div id="ls"></div><b id="tt"></b><button class="btn" id="go">Pedir por WhatsApp</button></div><div id="ts"></div>
+<footer>© Mi Barrio Hamburguesería</footer>
+<button id="fab"><span>🛒 <span id="cn">0</span> items</span><span id="ct">$0</span></button>
+<div id="bk"></div>
+<div id="dr"><h2 style="font-size:1.5rem">Tu pedido</h2><div id="ls"></div>
+<div class="ex" id="ex"><label><input type="checkbox" value="Sin cebolla"> Sin cebolla</label><label><input type="checkbox" value="Extra cheddar"> Extra cheddar</label><label><input type="checkbox" value="Bien cocida"> Bien cocida</label><label><input type="checkbox" value="Sin sal en papas"> Sin sal en papas</label></div>
+<div class="sw"><button class="a" data-m="Retiro">🏃 Retiro</button><button data-m="Envío">🛵 Envío</button></div>
+<input type="text" id="nm" placeholder="Tu nombre"><input type="text" id="ad" placeholder="Dirección" style="display:none">
+<h3 id="tt" style="color:var(--y)"></h3><button class="btn" id="go">Enviar pedido por WhatsApp</button></div>
+<div id="ts"></div>
 <script>
-const P=[["Hamburguesa clásica", 7500], ["Doble cheddar", 9500], ["Papas fritas", 3500], ["Cerveza", 3000]],E="🍔",q=P.map(()=>0),$=s=>document.querySelector(s),f=n=>'$'+n.toLocaleString('es-AR');
-$('#list').innerHTML=P.map((p,i)=>`<div class="card rv" style="transition-delay:${i%2*.1}s"><div class="em">${E}</div><div>${p[0]}</div><b>${f(p[1])}</b><button onclick="add(${i})">Agregar +</button></div>`).join('');
-const tot=()=>P.reduce((s,p,i)=>s+p[1]*q[i],0),cnt=()=>q.reduce((a,b)=>a+b,0);
-function draw(){$('#cn').textContent=cnt();$('#ct').textContent=f(tot());$('#tt').textContent='Total: '+f(tot());
-$('#ls').innerHTML=P.map((p,i)=>q[i]?`<div class="ln"><span>${p[0]}<br><small>${f(p[1]*q[i])}</small></span><span><button onclick="ch(${i},-1)">−</button> ${q[i]} <button onclick="ch(${i},1)">+</button></span></div>`:'').join('')||'<p>Todavía no agregaste nada</p>'}
-function ch(i,d){q[i]=Math.max(0,q[i]+d);draw()}
-function add(i){ch(i,1);const b=$('#fab');b.classList.remove('b');void b.offsetWidth;b.classList.add('b');const t=$('#ts');t.textContent='✓ '+P[i][0]+' agregado';t.classList.add('o');clearTimeout(add.t);add.t=setTimeout(()=>t.classList.remove('o'),1200);navigator.vibrate&&navigator.vibrate(15)}
+const M=[["🍔","Clásica","Carne, lechuga, tomate, mayo",7500,"b"],["🧀","Doble Cheddar","2 carnes, cheddar, panceta",9500,"b"],["🌶️","Picante","Jalapeños, cheddar, salsa brava",8800,"b"],["🥓","Bacon BBQ","Panceta, cebolla, BBQ",9200,"b"],["🌱","Veggie","Medallón de lentejas, rúcula",8200,"b"],
+["🍟","Papas clásicas","Porción grande",3500,"p"],["🧅","Aros de cebolla","Crocantes",4200,"p"],["🍟","Papas cheddar","Con panceta",5500,"p"],
+["🥤","Gaseosa","500ml",2200,"d"],["🍺","Cerveza","Pinta artesanal",3800,"d"],["🔥","Combo Barrio","Doble cheddar + papas + bebida",12500,"c"]];
+const T={b:"Burgers",p:"Papas",d:"Bebidas"},q=M.map(()=>0),$=s=>document.querySelector(s),f=n=>'$'+n.toLocaleString('es-AR');let cat='b',mode='Retiro';
+try{const s=JSON.parse(localStorage.mb||'[]');s.forEach((v,i)=>{if(i<q.length)q[i]=v|0})}catch(e){}
+$('#tabs').innerHTML=Object.keys(T).map(k=>`<button data-c="${k}" class="${k==cat?'a':''}">${T[k]}</button>`).join('');
+$('#tabs').onclick=e=>{const c=e.target.dataset.c;if(!c)return;cat=c;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('a',b.dataset.c==c));list()};
+function list(){$('#list').innerHTML=M.map((m,i)=>m[4]==cat?`<div class="it rv in"><div class="em">${m[0]}</div><div class="t"><b>${m[1]}</b><small>${m[2]}</small><span class="p">${f(m[3])}</span></div><button onclick="add(${i})">+</button></div>`:'').join('')}
+const tot=()=>M.reduce((s,m,i)=>s+m[3]*q[i],0),cnt=()=>q.reduce((a,b)=>a+b,0);
+function draw(){try{localStorage.mb=JSON.stringify(q)}catch(e){}$('#cn').textContent=cnt();$('#ct').textContent=f(tot());$('#fab').classList.toggle('v',cnt()>0);$('#tt').textContent='Total: '+f(tot());
+$('#ls').innerHTML=M.map((m,i)=>q[i]?`<div class="ln"><span>${m[1]}<br><small style="color:#999">${f(m[3]*q[i])}</small></span><span><button onclick="ch(${i},-1)">−</button> ${q[i]} <button onclick="ch(${i},1)">+</button></span></div>`:'').join('')}
+function ch(i,d){q[i]=Math.max(0,q[i]+d);draw();if(!cnt())op(false)}
+function add(i){ch(i,1);const b=$('#fab');b.classList.remove('b');void b.offsetWidth;b.classList.add('b');const t=$('#ts');t.textContent='✓ '+M[i][1]+' agregado';t.classList.add('o');clearTimeout(add.t);add.t=setTimeout(()=>t.classList.remove('o'),1100);navigator.vibrate&&navigator.vibrate(15)}
 const op=v=>{$('#dr').classList.toggle('o',v);$('#bk').classList.toggle('o',v)};$('#fab').onclick=()=>op(true);$('#bk').onclick=()=>op(false);
-$('#go').onclick=()=>{if(!cnt())return;const it=P.map((p,i)=>q[i]?q[i]+' x '+p[0]:'').filter(Boolean);location.href='https://wa.me/5491148237208?text='+encodeURIComponent('Hola! Quiero pedir:\n'+it.join('\n')+'\nTotal: '+f(tot()))};
-draw();
+document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.sw button').forEach(x=>x.classList.toggle('a',x==b));$('#ad').style.display=mode=='Envío'?'block':'none'});
+$('#go').onclick=()=>{if(!cnt())return;if(mode=='Envío'&&!$('#ad').value.trim()){$('#ad').focus();return}
+const it=M.map((m,i)=>q[i]?q[i]+' x '+m[1]:'').filter(Boolean),ex=[...document.querySelectorAll('#ex input:checked')].map(x=>x.value);
+const msg='Hola! Soy '+($('#nm').value||'un cliente')+'. Quiero pedir:\n'+it.join('\n')+(ex.length?'\nNotas: '+ex.join(', '):'')+'\n'+mode+(mode=='Envío'?': '+$('#ad').value:'')+'\nTotal: '+f(tot());
+location.href='https://wa.me/5491148237208?text='+encodeURIComponent(msg)};
+function open_(){const d=new Date(),h=d.getHours()+d.getMinutes()/60,w=d.getDay(),late=(w==5||w==6)?1:0;const on=h>=12||h<late;const s=$('#st');s.textContent=on?'● Abierto':'● Cerrado';s.className='st '+(on?'on':'off')}
+open_();list();draw();
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
-document.querySelectorAll('[data-n]').forEach(e=>{const n=+e.dataset.n;let k=0;const t=setInterval(()=>{k+=Math.ceil(n/25);if(k>=n){k=n;clearInterval(t)}e.textContent=k},40)});
 let tk;addEventListener('scroll',()=>{if(tk)return;tk=requestAnimationFrame(()=>{tk=0;const h=document.documentElement;$('#pg').style.transform='scaleX('+scrollY/(h.scrollHeight-innerHeight)+')';$('#nv').classList.toggle('s',scrollY>40)})},{passive:true});
 </script></body></html>
