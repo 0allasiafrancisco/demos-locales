@@ -1,0 +1,27 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tio Titi</title>
+<style>
+:root{--c:#b5452c}*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;color:#222;background:#faf8f5}
+header{background:var(--c);color:#fff;text-align:center;padding:4rem 1rem}header .e{font-size:3rem}h1{margin:.3rem 0}
+.btn{display:inline-block;background:#fff;color:var(--c);padding:.7rem 1.4rem;border-radius:99px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+main{max-width:640px;margin:auto;padding:1.5rem 1rem 7rem}h2{color:var(--c)}
+.p{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:.8rem 1rem;margin:.5rem 0;border-radius:12px;box-shadow:0 1px 3px #0001}
+.q button{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--c);background:#fff;color:var(--c);font-size:1.1rem;cursor:pointer}.q span{display:inline-block;width:1.6rem;text-align:center}
+#bar{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:.8rem 1rem;box-shadow:0 -2px 8px #0002;display:flex;justify-content:space-between;align-items:center}
+#bar .btn{background:#25d366;color:#fff}iframe{width:100%;height:240px;border:0;border-radius:12px}
+.demo{background:#222;color:#fff;text-align:center;font-size:.8rem;padding:.3rem}
+</style></head><body>
+<div class="demo">Demo de ejemplo · productos y precios de muestra</div>
+<header><div class="e">🍽️</div><h1>Tio Titi</h1><p>Restaurante · Cordoba 3799</p><a class="btn" href="#menu">Hacer pedido</a></header>
+<main><h2 id="menu">Nuestro menú</h2><div id="list"></div>
+<h2>Dónde estamos</h2><p>📍 Cordoba 3799<br>📞 <a href="tel:5491148674827">+54 11 4867-4827</a></p>
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Tio+Titi+Cordoba+3799+Buenos+Aires&output=embed"></iframe></main>
+<div id="bar"><b id="tot">Total: $0</b><button class="btn" id="go">Pedir por WhatsApp</button></div>
+<script>
+const P=[["Milanesa con papas", 9500], ["Pizza muzzarella", 8000], ["Ensalada mixta", 5500], ["Flan casero", 3500], ["Gaseosa", 2000]],q=P.map(()=>0),f=n=>'$'+n.toLocaleString('es-AR'),L=document.getElementById('list');
+function draw(){L.innerHTML=P.map((p,i)=>`<div class="p"><div>${p[0]}<br><small>${f(p[1])}</small></div><div class="q"><button onclick="m(${i},-1)">−</button><span>${q[i]}</span><button onclick="m(${i},1)">+</button></div></div>`).join('');
+document.getElementById('tot').textContent='Total: '+f(P.reduce((s,p,i)=>s+p[1]*q[i],0))}
+function m(i,d){q[i]=Math.max(0,q[i]+d);draw()}draw();
+document.getElementById('go').onclick=()=>{const it=P.map((p,i)=>q[i]?`${q[i]} x ${p[0]}`:'').filter(Boolean);if(!it.length)return alert('Elegí al menos un producto');
+const t=P.reduce((s,p,i)=>s+p[1]*q[i],0);location.href='https://wa.me/5491148674827?text='+encodeURIComponent('Hola! Quiero pedir:\n'+it.join('\n')+'\nTotal: '+f(t))}
+</script></body></html>
